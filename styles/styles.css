@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.kanban-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+
+.kanban-column {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 250px;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.kanban-column h2 {
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin: 0 0 10px 0;
+}
+
+.kanban-tasks {
+    min-height: 200px;
+    margin-top: 10px;
+}
+
+.task {
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 10px;
+    cursor: grab;
+    border: 2px solid transparent; /* Default border color */
+}
+
+.task.dragging {
+    opacity: 0.5;
+}
+
+.task.due-soon {
+    border-color: red; /* Border color for tasks due soon */
+}
+
+.kanban-tasks.over {
+    border: 2px dashed #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .kanban-column {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .kanban-column {
+        width: 90%;
+    }
+}
